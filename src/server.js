@@ -17,7 +17,9 @@ const notProduction = NODE_ENV !== "production";
 app.use(helmet());
 app.use(
   cors({
-    origin: notProduction ? "http://localhost:3000" : WEB_URL,
+    origin: notProduction
+      ? "http://localhost:3000"
+      : "https://spartanfinance.netlify.app",
   })
 );
 app.use(express.json());
