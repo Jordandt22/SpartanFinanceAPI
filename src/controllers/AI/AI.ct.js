@@ -1,8 +1,9 @@
+const OpenAI = require("openai");
+
 module.exports = {
   sendMessage: async (req, res, next) => {
     const { message } = req.body;
     try {
-      const OpenAI = require("openai");
       const client = new OpenAI({
         baseURL: "https://api.studio.nebius.ai/v1/",
         apiKey: process.env.OPENAI_KEY,
