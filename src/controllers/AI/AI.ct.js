@@ -1,5 +1,3 @@
-const axios = require("axios");
-
 module.exports = {
   sendMessage: async (req, res, next) => {
     const { message } = req.body;

@@ -12,7 +12,7 @@ const connect = require("./models/db");
 const app = express();
 
 // Middleware
-const { NODE_ENV, WEB_URL } = process.env;
+const { NODE_ENV } = process.env;
 const notProduction = NODE_ENV !== "production";
 app.use(helmet());
 app.use(
